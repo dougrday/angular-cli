@@ -128,6 +128,7 @@ export default Blueprint.extend({
     return {
       __path__: () => {
         let dir = this.dynamicPath.dir;
+        dir += path.sep + "directive";
         if (!options.locals.flat) {
           dir += path.sep + options.dasherizedModuleName;
         }

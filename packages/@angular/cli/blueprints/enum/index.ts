@@ -1,5 +1,6 @@
 import {getAppFromConfig} from '../../utilities/app-utils';
 import {dynamicPathParser, DynamicPathOptions} from '../../utilities/dynamic-path-parser';
+import * as path from 'path';
 
 const stringUtils = require('ember-cli-string-utils');
 const Blueprint = require('../../ember-cli/lib/models/blueprint');
@@ -46,7 +47,7 @@ export default Blueprint.extend({
     // Return custom template variables here.
     return {
       __path__: () => {
-        this.generatePath = this.dynamicPath.dir;
+        this.generatePath = this.dynamicPath.dir + path.sep + "constants";
         return this.generatePath;
       },
       __name__: () => {

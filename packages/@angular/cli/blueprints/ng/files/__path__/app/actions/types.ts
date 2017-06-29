@@ -1,4 +1,4 @@
-const app = "<%= fullAppName %>";
+const app = "@<%= jsComponentName %>";
 
 export interface AsyncActionType {
     BEGIN: string;
@@ -6,11 +6,11 @@ export interface AsyncActionType {
     FAILURE: string;
 }
 
-function Action(id) {
+export function Action(id) {
     return `${app}/${id}`;
 }
 
-function AsyncAction(id) {
+export function AsyncAction(id) {
     return {
         BEGIN: `${app}/${id}/begin`,
         SUCCESS: `${app}/${id}/success`,
@@ -18,6 +18,6 @@ function AsyncAction(id) {
     } as AsyncActionType;
 }
 
-// export const TODO = {
-//     NEW: Action("todo/new"),
-// }
+export const HELLO = {
+    WORLD: Action("hello/world"),
+}

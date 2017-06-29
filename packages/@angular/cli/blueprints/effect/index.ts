@@ -61,6 +61,7 @@ export default Blueprint.extend({
   locals: function (options: any) {
     return {
       className: stringUtils.classify(`${options.entity.name}Effects`),
+      entityName: options.entity.name,
       dynamicPath: this.dynamicPath.dir
     };
   },

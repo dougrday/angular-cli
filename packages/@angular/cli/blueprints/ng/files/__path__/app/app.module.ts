@@ -6,7 +6,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 <% if (routing) { %>
 import { AppRoutingModule } from './app-routing.module';<% } %>
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
+
+// Reducer
+import reducer from "./reducers";
 
 //import { TodoEffects } from "./effects/todo.effects";
 
